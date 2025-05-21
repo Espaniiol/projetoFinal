@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2: Calculadora de Média</title>
+    <link rel="stylesheet" href="exercicio2.css">
+</head>
+<body>
+    <div class="media-calculator-container">
+        <h1>Calculadora de Média Escolar</h1>
+        <div class="input-group">
+            <label for="nota1">Nota 1:</label>
+            <input type="text" id="nota1" placeholder="Ex: 7.5 (use ponto)" step="0.1" min="0" max="10" required>
+        </div>
+        <div class="input-group">
+            <label for="nota2">Nota 2:</label>
+            <input type="text" id="nota2" placeholder="Ex: 6.0 (use ponto)" step="0.1" min="0" max="10" required>
+        </div>
+        <div class="input-group">
+            <label for="nota3">Nota 3:</label>
+            <input type="text" id="nota3" placeholder="Ex: 8.2 (use ponto)" step="0.1" min="0" max="10" required>
+        </div>
+        <button id="calcularMediaBtn">Calcular Média</button>
+        <div id="resultadoMedia" class="resultado">
+            </div>
+    </div>
+    <script src="exercicio2.js"></script>
+</body>
+</html>
