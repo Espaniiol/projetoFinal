@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener para o botão de Sair
     logoutBtn.addEventListener('click', function(event) {
         event.preventDefault();
-        window.location.href = 'index.html'; // Redireciona de volta para a tela de login
+        window.location.href = '../index.html'; // Redireciona de volta para a tela de login
     });
 
     // Opcional: Carregar o primeiro exercício automaticamente ao carregar a página
