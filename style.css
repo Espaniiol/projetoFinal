@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Para evitar barras de rolagem desnecessárias */
+    background-color: #f0f2f5; /* Cor de fallback, se a imagem não carregar */
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/your-image-url.png'); /* SUBSTITUA PELA URL DA SUA IMAGEM DE FUNDO */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.9) contrast(1.1); /* Ajustes leves para a imagem de fundo */
+    z-index: 1; /* Garante que o fundo esteja por trás do conteúdo */
+}
+
+.login-container {
+    position: relative;
+    z-index: 2; /* Garante que a caixa de login esteja acima do fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px; /* Largura fixa da caixa de login */
+    max-width: 90%; /* Responsividade para telas menores */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 3em; /* Tamanho do texto portipar */
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #4a4a4a;
+    display: flex;
+    align-items: baseline;
+}
+
+.portipar-text {
+    color: #a01f2f; /* Cor do texto "portipar" */
+    font-size: 0.9em;
+}
+
+.hash {
+    color: #a01f2f; /* Cor do # */
+    font-size: 1.2em;
+    margin-left: -5px; /* Ajuste para sobrepor um pouco */
+}
+
+.avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: #a0a0a0;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: calc(100% - 40px); /* Ajusta a largura para acomodar o ícone */
+    padding: 15px 20px;
+    padding-right: 40px; /* Espaço para o ícone */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #a01f2f;
+}
+
+.input-group .person-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0a0;
+    font-size: 1.2em;
+}
+
+.access-button {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #a01f2f; /* Cor do botão ACESSAR */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.access-button:hover {
+    background-color: #8c1a27; /* Cor mais escura ao passar o mouse */
+}
+
+.unipar-logo {
+    margin-top: 30px;
+}
+
+.unipar-logo img {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .logo {
+        font-size: 2.5em;
+    }
+
+    .avatar-placeholder {
+        width: 80px;
+        height: 80px;
+        font-size: 3em;
+    }
+
+    .input-group input {
+        font-size: 0.9em;
+        padding: 12px 15px;
+        padding-right: 35px;
+    }
+
+    .input-group .person-icon {
+        right: 10px;
+        font-size: 1em;
+    }
+
+    .access-button {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+
+    .unipar-logo img {
+        max-width: 100px;
+    }
+}

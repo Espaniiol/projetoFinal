@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Exercícios</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="portfolio-container">
+        <aside class="exercise-list">
+            <div class="list-header">
+                <span class="portipar-text">portipar</span><span class="hash">#</span>
+                <p>Exercícios</p>
+                <button class="toggle-list-btn" id="toggleListBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="exercise-nav">
+                <ul>
+                    <li><a href="#" class="exercise-item" data-src="exercicio1.html">Exercício 1: Calculadora IMC</a></li>
+                    <li><a href="#" class="exercise-item" data-src="exercicio2.html">Exercício 2: Calculadora Simples</a></li>
+                    <li><a href="#" class="exercise-item" data-src="exercicio3.html">Exercício 3: Contador de Cliques</a></li>
+                    <li><a href="#" class="exercise-item" data-src="exercicio4.html">Exercício 4: To-Do List</a></li>
+                    </ul>
+            </nav>
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+        </aside>
+
+        <main class="iframe-content">
+            <header class="main-header">
+                <h2>Visualizador de Exercícios</h2>
+                <div class="info-text" id="currentExerciseName">
+                    Nenhum exercício selecionado
+                </div>
+            </header>
+
+            <section class="iframe-area">
+                <iframe id="exerciseIframe" src="" frameborder="0"></iframe>
+                <div id="welcomeOverlay" class="welcome-overlay active">
+                    <p>Selecione um exercício na lista ao lado para visualizá-lo aqui.</p>
+                    <i class="fas fa-arrow-left fa-3x bounce-left"></i>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
