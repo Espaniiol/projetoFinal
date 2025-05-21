@@ -10,5 +10,5 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     console.log('RA:', ra);
 
     // Redireciona o usuário para a página de portfólio
-    window.location.href = 'portfolio.html'; // <--- MUDANÇA AQUI
+    window.location.href = 'portfolio/portfolio.html'; // <--- MUDANÇA AQUI
 });
