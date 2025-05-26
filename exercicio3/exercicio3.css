@@ -1,0 +1,135 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e6f7ff;
+    color: #333;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.tabuada-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    max-width: 95%;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #a01f2f;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.input-group input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #a01f2f;
+}
+
+button#gerarTabuadaBtn {
+    background-color: #a01f2f;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 700;
+    width: 100%;
+}
+
+button#gerarTabuadaBtn:hover {
+    background-color: #8c1a27;
+    transform: translateY(-2px);
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    min-height: 150px;
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    overflow-y: auto;
+}
+
+.resultado p {
+    margin: 8px 0;
+    padding: 5px;
+    border-bottom: 1px dashed #eee;
+}
+
+.resultado p:last-child {
+    border-bottom: none;
+}
+
+.resultado strong {
+    color: #a01f2f;
+}
+
+.resultado .erro {
+    color: #c62828;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .tabuada-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .input-group input {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    button#gerarTabuadaBtn {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+
+    .resultado {
+        font-size: 1em;
+        padding: 15px;
+    }
+}
