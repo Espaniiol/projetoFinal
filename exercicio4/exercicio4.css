@@ -118,7 +118,6 @@ button#limparBtn:hover {
     font-weight: bold;
 }
 
-/* Ajustes para telas menores */
 @media (max-width: 480px) {
     .converter-container {
         padding: 20px;

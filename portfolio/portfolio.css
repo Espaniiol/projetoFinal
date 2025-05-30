@@ -14,7 +14,7 @@ body {
 }
 
 .exercise-list {
-    width: 300px; 
+    width: 300px;
     background-color: #2c3e50;
     color: #ecf0f1;
     padding: 20px 0;
@@ -26,12 +26,12 @@ body {
 }
 
 .exercise-list.collapsed {
-    width: 80px; 
+    width: 80px;
 }
 
 .list-header {
     text-align: center;
-    padding: 10px 20px 20px;
+    padding: 10px 20px 20px; /* Considere que este padding contribui para a altura do header */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,8 +88,37 @@ body {
 
 .exercise-nav {
     flex-grow: 1;
-    overflow-y: auto; 
+    overflow-y: auto;
+    /* --- Ajuste para a Scrollbar --- */
+    /* Calcula a altura máxima: 100% da viewport menos a altura do header e do botão de sair */
+    /* Os valores subtraídos (90px e 80px) são estimativas baseadas no seu padding/margin/font-size. */
+    /* Você pode precisar ajustá-los ligeiramente após testar no navegador. */
+    max-height: calc(100vh - 90px - 80px); /* 90px para .list-header, 80px para .logout-btn */
+    padding-right: 5px; /* Para evitar que o texto encoste na scrollbar */
+    /* --- Estilização da Scrollbar (WebKit) --- */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 #444; /* Firefox (thumb track) */
 }
+
+/* Estilização da Scrollbar para WebKit (Chrome, Safari, Edge) */
+.exercise-nav::-webkit-scrollbar {
+    width: 8px; /* Largura da scrollbar */
+}
+
+.exercise-nav::-webkit-scrollbar-track {
+    background: #444; /* Cor de fundo da trilha da scrollbar */
+    border-radius: 10px;
+}
+
+.exercise-nav::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do "polegar" da scrollbar */
+    border-radius: 10px;
+}
+
+.exercise-nav::-webkit-scrollbar-thumb:hover {
+    background: #a01f2f; /* Cor do "polegar" ao passar o mouse */
+}
+
 
 .exercise-nav ul {
     list-style: none;
@@ -124,15 +153,15 @@ body {
 }
 
 .exercise-list.collapsed .exercise-nav a {
-    text-align: center; 
-    padding: 15px 0; 
-    font-size: 0; 
-    white-space: nowrap; 
-    overflow: hidden; 
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .exercise-list.collapsed .exercise-nav a::before {
-    content: attr(data-src); 
+    content: attr(data-src);
     position: absolute;
     left: 100%;
     top: 50%;
@@ -153,8 +182,8 @@ body {
 
 
 .logout-btn {
-    width: calc(100% - 40px);
-    margin: 20px;
+    width: calc(100% - 40px); /* 300px - 20px de padding de cada lado = 260px - 40px = 220px */
+    margin: 20px; /* 20px de margin em cima e embaixo, 20px de cada lado */
     padding: 12px 15px;
     background-color: #a01f2f;
     color: #fff;
@@ -167,6 +196,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0; /* Impede que o botão encolha quando a lista cresce */
 }
 
 .logout-btn i {
@@ -184,7 +214,6 @@ body {
 .exercise-list.collapsed .logout-btn i {
     margin-right: 0;
 }
-
 
 
 .iframe-content {
@@ -220,10 +249,10 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
+    position: relative;
     overflow: hidden;
 }
 
@@ -231,7 +260,7 @@ body {
     width: 100%;
     height: 100%;
     border: none;
-    display: block; 
+    display: block;
 }
 
 .welcome-overlay {
@@ -250,7 +279,7 @@ body {
     color: #555;
     border-radius: 8px;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 5; 
+    z-index: 5;
 }
 
 .welcome-overlay p {
@@ -280,14 +309,18 @@ body {
 }
 
 
-
 @media (max-width: 768px) {
     .exercise-list {
-        width: 80px; 
+        width: 80px;
+        padding: 10px 0; /* Ajustar padding para mobile */
     }
 
     .exercise-list.collapsed {
         width: 80px;
+    }
+
+    .list-header {
+        padding: 10px 10px 10px; /* Ajustar padding do header para mobile */
     }
 
     .list-header .portipar-text,
@@ -303,11 +336,17 @@ body {
     }
 
     .list-header {
-        justify-content: center; 
+        justify-content: center;
     }
 
     .toggle-list-btn {
         margin: 0;
+    }
+
+    .exercise-nav {
+        /* Para o modo colapsado em mobile, o cálculo da altura máxima pode ser diferente */
+        /* A altura total da aside será mais compacta. */
+        max-height: calc(100vh - 60px - 80px); /* 60px para .list-header (ajustado), 80px para .logout-btn (ajustado) */
     }
 
     .exercise-nav a {
@@ -324,11 +363,11 @@ body {
     }
 
     .logout-btn {
-        width: 60px; 
-        height: 60px; 
-        border-radius: 50%; 
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
         padding: 0;
-        margin: 10px auto; 
+        margin: 10px auto;
         flex-shrink: 0;
     }
     .logout-btn span {
@@ -338,7 +377,6 @@ body {
         margin-right: 0;
         font-size: 1.2em;
     }
-
 
     .iframe-content {
         padding: 20px;
