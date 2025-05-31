@@ -6,8 +6,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden; /* Para evitar barras de rolagem desnecessárias */
-    background-color: #f0f2f5; /* Cor de fallback, se a imagem não carregar */
+    overflow: hidden;
+    background-color: #f0f2f5; 
 }
 
 .background-container {
@@ -16,16 +16,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://i.imgur.com/your-image-url.png'); /* SUBSTITUA PELA URL DA SUA IMAGEM DE FUNDO */
     background-size: cover;
     background-position: center;
-    filter: brightness(0.9) contrast(1.1); /* Ajustes leves para a imagem de fundo */
-    z-index: 1; /* Garante que o fundo esteja por trás do conteúdo */
+    filter: brightness(0.9) contrast(1.1); 
+    z-index: 1; 
 }
 
 .login-container {
     position: relative;
-    z-index: 2; /* Garante que a caixa de login esteja acima do fundo */
+    z-index: 2; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,15 +38,15 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 350px; /* Largura fixa da caixa de login */
-    max-width: 90%; /* Responsividade para telas menores */
+    width: 350px; 
+    max-width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .logo {
-    font-size: 3em; /* Tamanho do texto portipar */
+    font-size: 3em; 
     font-weight: 700;
     margin-bottom: 25px;
     color: #4a4a4a;
@@ -56,14 +55,14 @@ body {
 }
 
 .portipar-text {
-    color: #a01f2f; /* Cor do texto "portipar" */
+    color: #a01f2f; 
     font-size: 0.9em;
 }
 
 .hash {
-    color: #a01f2f; /* Cor do # */
+    color: #a01f2f;
     font-size: 1.2em;
-    margin-left: -5px; /* Ajuste para sobrepor um pouco */
+    margin-left: -5px; 
 }
 
 .avatar-placeholder {
@@ -137,7 +136,6 @@ body {
     opacity: 0.8;
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 480px) {
     .login-box {
         padding: 30px 20px;
