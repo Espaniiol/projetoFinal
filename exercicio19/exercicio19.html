@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19: Editor de Texto Simples</title>
+    <link rel="stylesheet" href="exercicio19.css">
+</head>
+<body>
+    <div class="text-editor-container">
+        <h1>Exercício 19: Editor de Texto Simples</h1>
+
+        <div class="editor-area">
+            <div class="toolbar">
+                <button data-command="bold">Negrito</button>
+                <button data-command="italic">Itálico</button>
+                <button data-command="underline">Sublinhado</button>
+            </div>
+            <div id="editorContent" class="editor-content" contenteditable="true" spellcheck="false">
+                <p>Comece a digitar seu texto aqui. Selecione o texto e clique nos botões para formatar.</p>
+                <p>Você pode testar o <b>negrito</b>, o <i>itálico</i> e o <u>sublinhado</u>.</p>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+    <script src="exercicio19.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e6f7ff;
+    color: #333;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.memory-game-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 750px;
+    max-width: 95%;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #a01f2f;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.enunciado, .explicacao {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.enunciado strong, .explicacao strong {
+    color: #a01f2f;
+}
+
+.game-area {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr);   
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    perspective: 1000px; 
+}
+
+.memory-card {
+    width: 100%;
+    height: 120px; 
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    user-select: none; 
+}
+
+.front-face {
+    background-color: #28a745;
+    transform: rotateY(180deg);
+}
+
+.back-face {
+    background-color: #a01f2f;
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.memory-card.matched {
+    cursor: default;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: rotateY(180deg); 
+}
+
+.status-message {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #28a745;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #dc3545;
+}
+
+.message.info {
+    background-color: #e2e3e5;
+    color: #383d41;
+    border-color: #d6d8db;
+}

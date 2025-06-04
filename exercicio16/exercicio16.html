@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16: Validador de Senha Forte</title>
+    <link rel="stylesheet" href="exercicio16.css">
+</head>
+<body>
+    <div class="password-validator-container">
+        <h1>Exercício 16: Validador de Senha Forte</h1>
+
+        <div class="validator-area">
+            <div class="input-group">
+                <label for="passwordInput">Digite sua senha:</label>
+                <input type="password" id="passwordInput" placeholder="Sua senha">
+            </div>
+
+            <button id="validateButton">Validar Senha</button>
+
+            <div id="validationResults" class="validation-results">
+                <h3>Requisitos da Senha:</h3>
+                <ul>
+                    <li id="lengthCriterion" class="invalid">Mínimo de 8 caracteres</li>
+                    <li id="uppercaseCriterion" class="invalid">Ao menos uma letra maiúscula</li>
+                    <li id="lowercaseCriterion" class="invalid">Ao menos uma letra minúscula</li>
+                    <li id="numberCriterion" class="invalid">Ao menos um número</li>
+                    <li id="specialCharCriterion" class="invalid">Ao menos um caractere especial</li>
+                </ul>
+                <p id="overallStatus" class="neutral"></p>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+    <script src="exercicio16.js"></script>
+</body>
+</html>

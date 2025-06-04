@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15: Controle de Visibilidade</title>
+    <link rel="stylesheet" href="exercicio15.css">
+</head>
+<body>
+    <div class="visibility-container">
+        <h1>Exercício 15: Controle de Visibilidade</h1>
+        
+        <div class="toggle-area">
+            <div class="control-buttons">
+                <button data-target="section1">Toggle Seção 1</button>
+                <button data-target="section2">Toggle Seção 2</button>
+                <button data-target="section3">Toggle Seção 3</button>
+            </div>
+
+            <div class="content-sections">
+                <div id="section1" class="content-section">
+                    <h2>Seção 1: História</h2>
+                    <p>
+                        A História é o estudo do passado, especialmente no que se refere aos seres humanos.
+                        É um campo vasto que abrange a análise de eventos, pessoas, sociedades e culturas
+                        ao longo do tempo. O conhecimento histórico nos permite entender como chegamos
+                        ao presente e a complexidade das interações humanas.
+                    </p>
+                </div>
+
+                <div id="section2" class="content-section">
+                    <h2>Seção 2: Ciência</h2>
+                    <p>
+                        A Ciência é o conjunto de conhecimentos que buscam explicar fenômenos naturais e sociais
+                        através da observação, experimentação e raciocínio lógico. Ela se baseia em métodos
+                        rigorosos para testar hipóteses e construir teorias que descrevem o funcionamento do universo.
+                    </p>
+                </div>
+
+                <div id="section3" class="content-section">
+                    <h2>Seção 3: Arte</h2>
+                    <p>
+                        A Arte é uma forma de expressão humana que utiliza a criatividade e a imaginação para
+                        produzir obras visuais, auditivas ou performáticas. Ela pode transmitir emoções, ideias
+                        e reflexões, enriquecendo a experiência humana e proporcionando novas perspectivas sobre o mundo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+    <script src="exercicio15.js"></script>
+</body>
+</html>
